@@ -30,10 +30,10 @@ class TestLab6(unittest.TestCase):
    
    def test_keyword_counter_boolean_true_works(self):
       expected = {"banana": 2, "apple": 1, "grapefruit": 1}
-      out = target.keyword_counter(self.list_of_words, True, self.text)
+      out = target.keyword_counter(self.list_of_words, self.text, None)
       self.assertEqual(out, expected)
    
    def test_keyword_counter_reads_file(self):
       expected = {"banana": 6, "apple": 3, "grapefruit": 3}
-      out = target.keyword_counter(self.list_of_words, False, self.file)
+      out = target.keyword_counter(self.list_of_words, None, self.file)
       self.assertEqual(out, expected)
